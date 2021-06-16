@@ -27,9 +27,9 @@ import java.util.*;
 
     private static final String YOUDAO_URL = "https://openapi.youdao.com/api";
 
-    private static final String APP_KEY = "26cc7f4ceba2b62a";
+    private static final String APP_KEY = "26cc7f4cXXXXXXX";  //这里的秘钥需要自己去有道云官网申请
 
-    private static final String APP_SECRET = "OiUhfvHspgRARnXsOkyQJgPr1GDkAEDC";
+    private static final String APP_SECRET = "OiUhfvHspgRARnXsOkyQJgPr1GXXXXXX";
 
     public static void main(String[] args) throws IOException {
 
