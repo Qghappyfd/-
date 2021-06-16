@@ -1,4 +1,6 @@
-# java课设
+
+
+#  基于idea + mysql8.0 + javaGUI 开发的单词簿
 
 
   - 使用说明：
