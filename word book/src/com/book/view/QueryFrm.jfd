@@ -1,0 +1,111 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:69:p, par l:::p {comp scrollPane1::l::0:x, seq l {comp label1:::p:62:p, space :::p, par l {comp regexradioButton:::p::p, seq {comp wordQueryTxt:::p:228:p, space :::p, comp Querybutton:::p::p}}}, comp panel1::l:::x}, space ::79:x}}"
+			"$verticalGroup": "par l {seq l {space :p:25:p, par b {comp Querybutton::b:p::p, comp label1::b:p::p, comp wordQueryTxt::b:p::p}, space :::p, comp regexradioButton:::p::p, space :::p, comp scrollPane1:::p:147:p, space :::p, comp panel1:::p::p, space :::x}}"
+		} ) {
+			name: "this"
+			"title": "单词查询页面"
+			"resizable": false
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "wordTable"
+					"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+						add( "编号" )
+						add( "单词" )
+						add( "释义" )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+					}, new java.util.Vector {
+						add( false )
+						add( false )
+						add( false )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+					} )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "wordTableMousePressed", true ) )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "单词查询："
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "wordQueryTxt"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "Querybutton"
+				"text": "查询"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "QuerybuttonActionPerformed", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {seq {par l {comp label4::l:p::p, comp label2::l:p:44:p}, space u:::p, par l {seq {comp idtxt:::p:51:p, space :p:60:p, comp label3:::p::p, space :::p, comp englishwordtxt:::::x}, comp meaningtxt:::::x}}, seq l {comp label5:::p::p, space :p:20:p, par l {comp scrollPane2:::::x, seq l {space :0:0:x, comp updatebutton:::p::p, space :p:63:p, comp delbutton:::p::p, space :p:56:p}}}}, space :p::p}}"
+				"$verticalGroup": "par l {seq l {par b {comp label2::b:p::p, comp label3::b:p::p, comp idtxt::b:p::p, comp englishwordtxt::b:p::p}, space :::p, par b {comp label4::b:p::p, comp meaningtxt::b:p::p}, space :::p, par l {seq {comp label5:::p::p, space :0:0:x}, seq l {comp scrollPane2:::p:74:p, space u:::p, par b {comp updatebutton::b:p::p, comp delbutton::b:p::p}, space :::x}}}}"
+			} ) {
+				name: "panel1"
+				"border": new javax.swing.border.TitledBorder( "单词操作" )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "编号："
+					"enabled": false
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "idtxt"
+					"editable": false
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label3"
+					"text": "单词："
+					"enabled": false
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "englishwordtxt"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label4"
+					"text": "释义："
+					"enabled": false
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "meaningtxt"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label5"
+					"text": "例句："
+					"enabled": false
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane2"
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "exampletxt"
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "updatebutton"
+					"text": "修改"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "updatebuttonActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "delbutton"
+					"text": "删除"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "delbuttonActionPerformed", true ) )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "regexradioButton"
+				"text": "正则查询"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 15, 0 )
+			"size": new java.awt.Dimension( 530, 495 )
+		} )
+	}
+}

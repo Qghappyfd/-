@@ -1,0 +1,35 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:43:p, par l {comp scrollPane1:::p:401:p, comp scrollPane2:::::x}, space ::44:x}, seq l {space :p:202:p, comp Translationbutton:::p::p, space ::208:x}}"
+			"$verticalGroup": "par l {seq l {space :p:18:p, comp scrollPane1:::p:113:p, space s:::p, comp Translationbutton:::p::p, space ::11:x, comp scrollPane2:::p:137:p, space :::p}}"
+		} ) {
+			name: "this"
+			"resizable": false
+			"title": "文本翻译"
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "wordtxt"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane2"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "answertxt"
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "Translationbutton"
+				"text": "翻译"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "TranslationbuttonActionPerformed", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 70, 60 )
+			"size": new java.awt.Dimension( 490, 365 )
+		} )
+	}
+}

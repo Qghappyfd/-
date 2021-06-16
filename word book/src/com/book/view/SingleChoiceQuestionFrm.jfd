@@ -1,0 +1,55 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {par l {seq {space :p:56:p, par l {comp Wordtxt:::p:313:p, par t:l::p {comp radioButton0::l::175:x, comp radioButton1::t::175:x, comp radioButton2::l::175:x, comp radioButton3::t::175:x}}}, seq l {space :p:177:p, comp Submitbutton:::p::p}}, space ::99:x}}"
+			"$verticalGroup": "par l {seq l {space :p:42:p, comp Wordtxt:::p::p, space s:::p, comp radioButton0:::p::p, space s:::p, comp radioButton1:::p::p, space s:::p, comp radioButton2:::p::p, space s:::p, comp radioButton3:::p::p, space s:::p, comp Submitbutton:::p::p, space ::22:x}}"
+		} ) {
+			name: "this"
+			"resizable": false
+			"title": "小练习"
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "Wordtxt"
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "radioButton0"
+				"text": "A."
+				"$buttonGroup": new FormReference( "buttonGroup1" )
+				"actionCommand": "A"
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "radioButton1"
+				"text": "B."
+				"$buttonGroup": new FormReference( "buttonGroup1" )
+				"actionCommand": "B"
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "radioButton2"
+				"$buttonGroup": new FormReference( "buttonGroup1" )
+				"text": "C."
+				"actionCommand": "C"
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "radioButton3"
+				"$buttonGroup": new FormReference( "buttonGroup1" )
+				"text": "D."
+				"actionCommand": "D"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "Submitbutton"
+				"text": "提交"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "SubmitbuttonActionPerformed", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 100, 15 )
+			"size": new java.awt.Dimension( 470, 330 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "buttonGroup1"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 361 )
+		} )
+	}
+}

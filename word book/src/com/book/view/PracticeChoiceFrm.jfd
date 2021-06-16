@@ -1,0 +1,42 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {space :p:21:p, comp button1:::p:180:p, space ::101:x, comp button2:::p:180:p, space :p:31:p}, seq l {space :p:183:p, comp label1:::p::p, space ::202:x}}"
+			"$verticalGroup": "par l {seq l {space ::38:x, par b {comp button2::b:p:200:p, comp button1::b:p:200:p}, space :::p, comp label1:::p::p, space :::p}}"
+		} ) {
+			name: "this"
+			"resizable": false
+			"title": "练习模式"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "英-中"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 10, false )
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/images/英译中.png" )
+				"horizontalTextPosition": 0
+				"verticalTextPosition": 3
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button2"
+				"text": "中-英"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/images/中译英.png" )
+				"horizontalTextPosition": 0
+				"verticalTextPosition": 3
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 65536, 10, false )
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button2ActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/images/分岔路 (3).png" )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 70, 5 )
+			"size": new java.awt.Dimension( 515, 410 )
+		} )
+	}
+}

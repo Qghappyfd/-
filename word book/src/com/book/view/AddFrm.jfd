@@ -1,0 +1,52 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:48:p, par l {seq {comp Addbutton:::p::p, space :p:94:p, comp resetbutton:::p::p}, seq {par l:::p {comp label2::l:::x, comp label3::l:::x, comp label1::l:::x}, space :::x, par l:::p {comp meaningtxt::::191:x, comp englishwordtxt::::191:x, comp scrollPane1::l::191:x}}}, space :p:55:p}}"
+			"$verticalGroup": "par l {seq l {space :p:34:p, par b {comp englishwordtxt::b:p::p, comp label1::b:p::p}, space :p:24:p, par b {comp label2::b:p::p, comp meaningtxt::b:p::p}, par l {seq {space :p:27:p, comp label3:::p::p, space ::67:x}, seq {space :p:26:p, comp scrollPane1::::67:x, space s:::p}}, par b {comp Addbutton::b:p::p, comp resetbutton::b:p::p}, space :p:39:p}}"
+		} ) {
+			name: "this"
+			"title": "单词添加"
+			"resizable": false
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "单词:"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "englishwordtxt"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "释义："
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "meaningtxt"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "例句："
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "Addbutton"
+				"text": "添加"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "AddbuttonActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "resetbutton"
+				"text": "重置"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "resetbuttonActionPerformed", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "exampletxt"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 200, 65 )
+			"size": new java.awt.Dimension( 355, 330 )
+		} )
+	}
+}

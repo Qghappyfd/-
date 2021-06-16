@@ -1,0 +1,99 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :p:26:p, par l {comp RandomQuerybutton:::p:200:p, comp QueryButton:::p:200:p}, space ::82:x, par l {comp AddButton::t:p:200:p, comp Internetbutton::t:p:200:p}, space :p:25:p}}"
+			"$verticalGroup": "par l {seq l {space :p:17:p, par t {comp AddButton:::p:200:p, comp QueryButton:::p:200:p}, space s:::p, par t {comp RandomQuerybutton:::p:200:p, comp Internetbutton:::p:200:p}, space ::21:x}}"
+		} ) {
+			name: "this"
+			"title": "单词簿"
+			"autoRequestFocus": false
+			"resizable": false
+			"background": sfield java.awt.Color black
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "QueryButton"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/images/查询.png" )
+				"text": "单词查询"
+				"horizontalTextPosition": 0
+				"verticalTextPosition": 3
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 131073, 13, false )
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"borderPainted": false
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "QueryButtonActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "AddButton"
+				"borderPainted": false
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/images/添加.png" )
+				"text": "单词添加"
+				"horizontalTextPosition": 0
+				"verticalTextPosition": 3
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 13, false )
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "AddButtonActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "RandomQuerybutton"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/images/练习.png" )
+				"horizontalTextPosition": 0
+				"verticalTextPosition": 3
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"borderPainted": false
+				"text": "练习模式"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 13, false )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "RandomQuerybuttonActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "Internetbutton"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/images/科技.png" )
+				"borderPainted": false
+				"text": "网络实验室"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 13, false )
+				"horizontalTextPosition": 0
+				"verticalTextPosition": 3
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "InternetbuttonActionPerformed", true ) )
+			} )
+			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "menuBar1"
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menu1"
+					"text": "基本数据维护"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/images/扳手 (1).png" )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "exitmenuItem"
+						"text": "安全退出"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "exitmenuItemActionPerformed", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menu3"
+					"text": "声音"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/images/声音.png" )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "musicitem"
+						"text": "声音关闭"
+						"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "musicitemActionPerformed", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menu2"
+					"text": "关于我们"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/images/星星 (1).png" )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuItem1"
+						"text": "关于开发者"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "AboutUsActionPerformed", true ) )
+					} )
+				} )
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 65, 25 )
+			"size": new java.awt.Dimension( 535, 510 )
+		} )
+	}
+}

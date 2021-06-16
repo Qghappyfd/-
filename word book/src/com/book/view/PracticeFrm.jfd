@@ -1,0 +1,60 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:154:p, par t {comp text1:::p:111:p, comp text2:::p:111:p}, space ::183:x}, seq {par t {seq {space :p:97:p, comp AgainButton:::p::p, space ::109:x, comp CloseButton:::p::p}, seq {space ::89:x, par l {par l:::p {comp label1::t:::x, comp label3::t:::x}, comp label2:::p:44:p}, space s:::p, par l:::p {comp englishwordtxt::l::215:x, comp exampletxt::t::215:x, comp meaningtxt::t::215:x}}}, space ::82:x}}"
+			"$verticalGroup": "par l {seq l {space :p:15:p, comp text1:::p::p, space :::p, comp text2:::p::p, space s:::p, par b {comp englishwordtxt::b:p::p, comp label1::b:p::p}, space :p:14:p, par b {comp meaningtxt::b:p::p, comp label2::b:p::p}, space u:::p, par b {comp exampletxt::b:p::p, comp label3::b:p::p}, space s:::p, par b {comp AgainButton::b:p::p, comp CloseButton::b:p::p}, space ::40:x}}"
+		} ) {
+			name: "this"
+			"resizable": false
+			"title": "小练习"
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "text1"
+				"editable": false
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "text2"
+				"editable": false
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "单词："
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "englishwordtxt"
+				"editable": false
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "释义："
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "例句:"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "meaningtxt"
+				"editable": false
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "exampletxt"
+				"editable": false
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "AgainButton"
+				"text": "再试一次"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "AgainButtonActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "CloseButton"
+				"text": "关闭"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "CloseButtonActionPerformed", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 60, 15 )
+			"size": new java.awt.Dimension( 450, 335 )
+		} )
+	}
+}

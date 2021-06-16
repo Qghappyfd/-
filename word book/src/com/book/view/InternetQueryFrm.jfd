@@ -1,0 +1,37 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:32:p, par l {comp scrollPane1:::p:379:p, seq {comp Wordtxt:::p:295:p, space :::p, comp QueryButton:::p:78:p}}, space ::32:x}}"
+			"$verticalGroup": "par l {seq l {space :p:28:p, par l {comp QueryButton:::p:40:p, comp Wordtxt:::p:40:p}, space s:::p, comp scrollPane1:::p:218:p, space ::24:x}}"
+		} ) {
+			name: "this"
+			"resizable": false
+			"title": "网络查询"
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "Wordtxt"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "QueryButton"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/images/查询 2.png" )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "QueryButtonActionPerformed", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "MeaningTxt"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 165, 70 )
+			"size": new java.awt.Dimension( 445, 360 )
+		} )
+		add( new FormComponent( "javax.swing.JTree" ) {
+			name: "tree1"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 715, 285 )
+		} )
+	}
+}

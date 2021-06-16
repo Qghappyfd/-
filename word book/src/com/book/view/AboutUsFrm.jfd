@@ -1,0 +1,29 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {space ::108:x, par l {comp label1:::p:352:p, comp label2:::p:348:p}, space :p:73:p}}"
+			"$verticalGroup": "par l {seq t {space :::x, comp label1:::p:39:p, space :::p, comp label2:::p:333:p}}"
+		} ) {
+			name: "this"
+			"title": "关于创作团队"
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/images/s.jpg" )
+			"background": new java.awt.Color( 0, 204, 204, 255 )
+			"resizable": false
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "创作人员： 胡伟健 、龚文涛、 方栋"
+				"background": new java.awt.Color( 0, 204, 204, 255 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/images/20201226122404_b7e3a (1).jpg" )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 85, 60 )
+			"size": new java.awt.Dimension( 535, 415 )
+		} )
+	}
+}
